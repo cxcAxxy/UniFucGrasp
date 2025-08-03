@@ -1,0 +1,1204 @@
+
+<robot
+  name="wu_test2">  
+  <link
+    name="plam_link">
+    <inertial>
+      <origin
+        xyz="0.0020915 0.010871 0.051117"
+        rpy="0 0 0" />
+      <mass
+        value="0.13149" />
+      <inertia
+        ixx="7.4706E-05"
+        ixy="-3.2419E-06"
+        ixz="-2.1048E-06"
+        iyy="0.0001577"
+        iyz="-3.4445E-06"
+        izz="0.0001193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/plam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/plam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="th_ankle_link">
+    <inertial>
+      <origin
+        xyz="0.011813 -0.00027711 -0.0060907"
+        rpy="0 0 0" />
+      <mass
+        value="0.0046722" />
+      <inertia
+        ixx="4.7814E-07"
+        ixy="5.0563E-09"
+        ixz="1.2334E-07"
+        iyy="6.2822E-07"
+        iyz="-6.3934E-09"
+        izz="4.7595E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="0.029978 -0.019568 0.038471"
+      rpy="0 0 -0.17453" />
+    <parent
+      link="plam_link" />
+    <child
+      link="th_ankle_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_pro_link">
+    <inertial>
+      <origin
+        xyz="0.024227 -0.00031839 -0.00019539"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062047" />
+      <inertia
+        ixx="2.2972E-07"
+        ixy="5.1471E-08"
+        ixz="-2.0614E-08"
+        iyy="1.341E-06"
+        iyz="2.0318E-10"
+        izz="1.5066E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_pro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_pro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_pro_joint"
+    type="revolute">
+    <origin
+      xyz="0.0164 -0.0001 0"
+      rpy="1.5708 -0.68818 0" />
+    <parent
+      link="th_ankle_link" />
+    <child
+      link="th_pro_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_mid_link">
+    <inertial>
+      <origin
+        xyz="0.017267 -0.00031249 0.00023713"
+        rpy="0 0 0" />
+      <mass
+        value="0.0059589" />
+      <inertia
+        ixx="1.8798E-07"
+        ixy="-2.4736E-08"
+        ixz="8.9496E-09"
+        iyy="9.817E-07"
+        iyz="-8.2292E-10"
+        izz="1.1365E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_mid_joint"
+    type="revolute">
+    <origin
+      xyz="0.049 0 0.0001"
+      rpy="0 0 0.16458" />
+    <parent
+      link="th_pro_link" />
+    <child
+      link="th_mid_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_dis_link">
+    <inertial>
+      <origin
+        xyz="0.022919 -8.672E-05 1.7706E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0086878" />
+      <inertia
+        ixx="4.0836E-07"
+        ixy="-7.109E-09"
+        ixz="2.8741E-10"
+        iyy="8.2548E-07"
+        iyz="-3.9621E-12"
+        izz="8.2447E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_dis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/th_dis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_dis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0385 0 0"
+      rpy="0 0 0.10972" />
+    <parent
+      link="th_mid_link" />
+    <child
+      link="th_dis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="in_ankle_link">
+    <inertial>
+      <origin
+        xyz="0.00016546 0.0015311 -0.003996"
+        rpy="0 0 0" />
+      <mass
+        value="0.0025173" />
+      <inertia
+        ixx="2.6021E-07"
+        ixy="4.9679E-09"
+        ixz="6.1707E-09"
+        iyy="2.4751E-07"
+        iyz="-1.1608E-08"
+        izz="1.5361E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="in_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="0.040291 0.011519 0.11078"
+      rpy="1.5708 0.088656 0" />
+    <parent
+      link="plam_link" />
+    <child
+      link="in_ankle_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="in_pro_link">
+    <inertial>
+      <origin
+        xyz="0.02412 -0.00031711 -0.00043255"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062283" />
+      <inertia
+        ixx="2.3038E-07"
+        ixy="5.1726E-08"
+        ixz="-2.2123E-08"
+        iyy="1.3584E-06"
+        iyz="2.2508E-10"
+        izz="1.5244E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_pro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_pro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="in_pro_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.00399"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="in_ankle_link" />
+    <child
+      link="in_pro_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="in_mid_link">
+    <inertial>
+      <origin
+        xyz="0.01376 -0.00036947 0.00018698"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050812" />
+      <inertia
+        ixx="1.5995E-07"
+        ixy="-1.7639E-08"
+        ixz="6.7945E-09"
+        iyy="6.3451E-07"
+        iyz="-7.0923E-10"
+        izz="7.6264E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="in_mid_joint"
+    type="revolute">
+    <origin
+      xyz="0.049 0 -0.0001"
+      rpy="0 0 0" />
+    <parent
+      link="in_pro_link" />
+    <child
+      link="in_mid_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="in_dis_link">
+    <inertial>
+      <origin
+        xyz="0.022809 -5.5916E-05 -1.7347E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0092537" />
+      <inertia
+        ixx="4.249E-07"
+        ixy="-4.6978E-09"
+        ixz="2.5146E-22"
+        iyy="9.0268E-07"
+        iyz="8.7063E-25"
+        izz="9.0022E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_dis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/in_dis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="in_dis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0315 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="in_mid_link" />
+    <child
+      link="in_dis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mi_ankle_link">
+    <inertial>
+      <origin
+        xyz="0.00016546 0.0015311 -0.004096"
+        rpy="0 0 0" />
+      <mass
+        value="0.0025173" />
+      <inertia
+        ixx="2.6021E-07"
+        ixy="4.9679E-09"
+        ixz="6.1707E-09"
+        iyy="2.4751E-07"
+        iyz="-1.1608E-08"
+        izz="1.5361E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mi_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="0.01125 0.011419 0.12507"
+      rpy="1.5708 0 0" />
+    <parent
+      link="plam_link" />
+    <child
+      link="mi_ankle_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mi_pro_link">
+    <inertial>
+      <origin
+        xyz="0.02412 -0.00031711 -0.00043255"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062283" />
+      <inertia
+        ixx="2.3038E-07"
+        ixy="5.1726E-08"
+        ixz="-2.2123E-08"
+        iyy="1.3584E-06"
+        iyz="2.2508E-10"
+        izz="1.5244E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_pro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_pro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mi_pro_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.00389"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="mi_ankle_link" />
+    <child
+      link="mi_pro_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mi_mid_link">
+    <inertial>
+      <origin
+        xyz="0.01376 -0.00036947 0.00018698"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050812" />
+      <inertia
+        ixx="1.5995E-07"
+        ixy="-1.7639E-08"
+        ixz="6.7945E-09"
+        iyy="6.3451E-07"
+        iyz="-7.0925E-10"
+        izz="7.6264E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mi_mid_joint"
+    type="revolute">
+    <origin
+      xyz="0.049 0 -0.0001"
+      rpy="0 0 0" />
+    <parent
+      link="mi_pro_link" />
+    <child
+      link="mi_mid_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mi_dis_link">
+    <inertial>
+      <origin
+        xyz="0.022809 -5.5916E-05 -1.301E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0092537" />
+      <inertia
+        ixx="4.249E-07"
+        ixy="-4.6978E-09"
+        ixz="1.503E-23"
+        iyy="9.0268E-07"
+        iyz="2.5624E-24"
+        izz="9.0022E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_dis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/mi_dis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mi_dis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0315 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="mi_mid_link" />
+    <child
+      link="mi_dis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ri_ankle_link">
+    <inertial>
+      <origin
+        xyz="2.5947E-05 0.0013628 -0.0037107"
+        rpy="0 0 0" />
+      <mass
+        value="0.0021413" />
+      <inertia
+        ixx="1.9492E-07"
+        ixy="4.1406E-09"
+        ixz="4.5039E-09"
+        iyy="1.7846E-07"
+        iyz="-3.1545E-09"
+        izz="1.3506E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ri_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014598 0.0093 0.11429"
+      rpy="1.5708 -0.061087 0" />
+    <parent
+      link="plam_link" />
+    <child
+      link="ri_ankle_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ri_pro_link">
+    <inertial>
+      <origin
+        xyz="0.02412 -0.00031711 -0.00043255"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062283" />
+      <inertia
+        ixx="2.3038E-07"
+        ixy="5.1726E-08"
+        ixz="-2.2123E-08"
+        iyy="1.3584E-06"
+        iyz="2.2512E-10"
+        izz="1.5244E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_pro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_pro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ri_pro_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.00189"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="ri_ankle_link" />
+    <child
+      link="ri_pro_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ri_mid_link">
+    <inertial>
+      <origin
+        xyz="0.01376 -0.00036947 0.00018698"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050812" />
+      <inertia
+        ixx="1.5995E-07"
+        ixy="-1.7639E-08"
+        ixz="6.7945E-09"
+        iyy="6.3451E-07"
+        iyz="-7.0925E-10"
+        izz="7.6264E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ri_mid_joint"
+    type="revolute">
+    <origin
+      xyz="0.049 0 -0.0001"
+      rpy="0 0 0" />
+    <parent
+      link="ri_pro_link" />
+    <child
+      link="ri_mid_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ri_dis_link">
+    <inertial>
+      <origin
+        xyz="0.022919 -8.6721E-05 1.7706E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0086878" />
+      <inertia
+        ixx="4.0836E-07"
+        ixy="-7.109E-09"
+        ixz="2.8741E-10"
+        iyy="8.2548E-07"
+        iyz="-3.9621E-12"
+        izz="8.2447E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_dis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/ri_dis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ri_dis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0315 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ri_mid_link" />
+    <child
+      link="ri_dis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="li_ankle_link">
+    <inertial>
+      <origin
+        xyz="2.5947E-05 0.0013628 -0.0037107"
+        rpy="0 0 0" />
+      <mass
+        value="0.0021413" />
+      <inertia
+        ixx="1.9492E-07"
+        ixy="4.1406E-09"
+        ixz="4.5039E-09"
+        iyy="1.7846E-07"
+        iyz="-3.1545E-09"
+        izz="1.3506E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="li_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="-0.038811 0.0093 0.10193"
+      rpy="1.5708 -0.12217 0" />
+    <parent
+      link="plam_link" />
+    <child
+      link="li_ankle_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="li_pro_link">
+    <inertial>
+      <origin
+        xyz="0.02412 -0.00031711 -0.00043255"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062283" />
+      <inertia
+        ixx="2.3038E-07"
+        ixy="5.1726E-08"
+        ixz="-2.2123E-08"
+        iyy="1.3584E-06"
+        iyz="2.2512E-10"
+        izz="1.5244E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_pro_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_pro_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="li_pro_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.00189"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="li_ankle_link" />
+    <child
+      link="li_pro_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="li_mid_link">
+    <inertial>
+      <origin
+        xyz="0.01376 -0.00036947 0.00018698"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050812" />
+      <inertia
+        ixx="1.5995E-07"
+        ixy="-1.7639E-08"
+        ixz="6.7945E-09"
+        iyy="6.3451E-07"
+        iyz="-7.0926E-10"
+        izz="7.6264E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_mid_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_mid_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="li_mid_joint"
+    type="revolute">
+    <origin
+      xyz="0.049 0 -0.0001"
+      rpy="0 0 0" />
+    <parent
+      link="li_pro_link" />
+    <child
+      link="li_mid_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="li_dis_link">
+    <inertial>
+      <origin
+        xyz="0.022919 -8.672E-05 1.7706E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0086878" />
+      <inertia
+        ixx="4.0836E-07"
+        ixy="-7.109E-09"
+        ixz="2.8741E-10"
+        iyy="8.2548E-07"
+        iyz="-3.9621E-12"
+        izz="8.2447E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_dis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes/li_dis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="li_dis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0315 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="li_mid_link" />
+    <child
+      link="li_dis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

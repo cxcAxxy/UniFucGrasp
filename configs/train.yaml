@@ -1,0 +1,36 @@
+defaults:
+  - log.yaml
+  - model.yaml
+  - dataset: dataset.yaml
+  - _self_
+
+
+name: "cvae_train_all"
+seed: 42
+gpu:
+  - 0
+  - 1
+
+
+
+load_from_checkpoint: False
+log_every_n_steps: 5
+
+
+training:
+  max_epochs: 15
+
+  save_dir: '${output_dir}/state_dict'
+  save_every_n_epoch: 5
+
+  lr: 1e-5
+
+  loss_kl: True
+  loss_kl_weight: 0.01
+
+  loss_trj: True
+  loss_trj_weight: 1
+
+  loss_recon: True
+  loss_recon_weight: 1
+

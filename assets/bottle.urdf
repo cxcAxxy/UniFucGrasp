@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot name="mustard_bottle">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="bottle.obj" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="bottle.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+      <inertia
+        ixx="0.01" ixy="0.0" ixz="0.0"
+        iyy="0.01" iyz="0.0"
+        izz="0.01"/>
+    </inertial>
+  </link>
+
+</robot>

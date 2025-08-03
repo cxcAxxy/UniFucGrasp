@@ -1,0 +1,32 @@
+{
+    "urdf_path": {
+        "shadowhand_motor": "/home/cxc/Desktop/cxc_hand/data/data_hand/shadowhand/shadowhand_motor.urdf",
+        "inspire": "/home/cxc/Desktop/cxc_hand/data/data_hand/inspire/urdf_right_with_force_sensor_no_xml.urdf",
+        "hnu_hand": "/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/hunan_hand.urdf"
+    },
+    "meshes_path": {
+        "shadowhand_motor": "/home/cxc/Desktop/cxc_hand/data/data_hand/shadowhand/meshes",
+        "inspire": "/home/cxc/Desktop/cxc_hand/data/data_hand/inspire/meshes",
+        "hnu_hand": "/home/cxc/Desktop/cxc_hand/data/data_hand/hunan_hand/meshes"
+    },
+    "hand_points_path": {
+        "shadowhand_motor": "/home/cxc/Desktop/cxc_hand/data/Pointhand_down/shadowhand_motor.pth",
+        "inspire": "/home/cxc/Desktop/cxc_hand/data/Pointhand_down/inspire.pth",
+        "hnu_hand":"/home/cxc/Desktop/cxc_hand/data/Pointhand_down/hnu_hand.pth"
+    },
+    "remove_links": {
+        "shadowhand_motor": ["rh_thhub","rh_thproximal","rh_thbase"],
+        "inspire": [],
+        "hnu_hand": []
+    }
+}
+
+
+
+
+
+
+
+
+
+

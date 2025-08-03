@@ -1,0 +1,6 @@
+
+robot_name: "all"      # all inspire shadowhand_motor hnu_hand
+object_pc_type: "random"
+batch_size: 6
+num_workers: 2
+num_points: 2500
