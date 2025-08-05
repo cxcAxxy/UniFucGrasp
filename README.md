@@ -7,9 +7,14 @@ Functional Dexterous Hand Gesture Generation
     git clone git@github.com:cxcAxxy/Unifuncgrasp.git
 
     conda create -n unifuncgrapnet python=3.8 -y
-    conda activate unifuncgraspnet 
+
+    conda activate unifuncgraspnet
 
     pip install -r requirements.txt
+
+## Weights & Biases (Optional)
+
+This project use Weights & Biases to monitor loss curves. If you're not familiar with it, refer to the [W&B Tutorials](https://docs.wandb.ai/tutorials/) if you haven't used before. Alternatively, you can disable the related sections in `train.py` 
 
 ## Get Started
 
@@ -44,9 +49,7 @@ python validate.py
 
 ## Dataset
 
-You can download our prepared dataset here,For detailed information about the dataset, please refer to the paper.
-
-
+You can download our prepared dataset [here](https:):,For detailed information about the dataset, please refer to the paper.
 
 ## Steps to Apply our Method to a New Hand
 
@@ -55,3 +58,7 @@ You can download our prepared dataset here,For detailed information about the da
 3. Specify redundant  remove_links names in `hand_assert.json . You can visualize the links  to identify which links are irrelevant for contact.
 4. Use `data_utils/generate_pc.py` to sample point clouds for each robot link and save them.
 5. Then, simply replace the `robot_name` in `configs/dataset/dataset.yaml` with the corresponding hand model name.
+
+## Citation
+
+If you find our codes or models useful in your work, please cite [our paper]():
