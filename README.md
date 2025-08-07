@@ -1,10 +1,10 @@
-# Unifuncgrasp
+# UniFucGrasp
 
 Functional Dexterous Hand Gesture Generation
 
 ## Prerequisites:
 
-    git clone git@github.com:cxcAxxy/Unifuncgrasp.git
+    git clone git@github.com:cxcAxxy/UniFucGrasp.git
 
     conda create -n unifuncgrapnet python=3.8 -y
 
